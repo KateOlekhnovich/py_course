@@ -566,8 +566,7 @@ def new_grade(student_name, grade):
     """Функция для добавления новой оценке студенту.
 Arguments:
 student_name - str - имя, не менее 2-х символов.
-grade - int - оценка
-Returns:
+grade - int - оценкаc:\Users\ekol0322\Downloads\Telegram Desktop\Lecture 6_2 Python Modules Basics — for pdf.pdf
 True - если оценка доблена успешно
 False - если имя меньше 2 символов
 """

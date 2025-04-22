@@ -1,0 +1,56 @@
+# TOSO List
+#task task_id status
+# task_list[task_id]={"task_name":"task_name", "Status":status}
+
+task_list={}
+task_auto_id = 1
+def create_task():
+    global task_auto_id
+    t_name=input("Name the task: ")
+    task_list[task_auto_id]={"task_name":t_name, "status": False}
+    task_auto_id +=1
+    return True
+
+
+def show_tasks():
+    print ("Show tasks")
+    for task_id, description in task_list.items():
+        print("______________")
+        print(f"Task id:{task_id}")
+        for key, value in description.items():
+            print("\t", key, value)
+        print("______________")
+
+
+def change_status():
+    task_id = int(input("Put task's number: "))
+    if task_id not in task_list:
+        return False
+    inside = task_list.get(task_id)
+    inside['status'] = True
+    task_list.update({task_id:inside})
+
+
+def main():
+    msg="""
+    1 - create task
+    2 - show tasks
+    3 - change task status
+    quit - exit from program 
+    
+    """
+    operation=input(msg)
+    while operation != "quit":
+        match operation:
+            case "1":
+                create_task()
+            case "2":
+                show_tasks()
+            case "3":
+                change_status()
+            case _:
+                print("Didn't get!")
+        operation=input(msg)
+
+
+main()
