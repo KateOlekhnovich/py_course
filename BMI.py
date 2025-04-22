@@ -25,3 +25,4 @@ elif BMI>=35 and BMI < 40:
     print ("You are obese (2nd degree)")
 elif BMI >= 40:
     print ("You are obese (3rd degree)")
+    
