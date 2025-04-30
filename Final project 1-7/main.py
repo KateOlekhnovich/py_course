@@ -7,7 +7,7 @@ book_auto_id = 1
 def main():
     msg="""
     Choose an operation:
-    1 - abb a new book to the book list
+    1 - add a new book to the book list
     2 - show the book list
     3 - change book status
     4 - delete the book
