@@ -1,0 +1,1 @@
+INSERT INTO user (u_name, u_surname) VALUES ("Катя", "Олехнович");
